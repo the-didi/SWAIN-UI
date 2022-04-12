@@ -3,9 +3,22 @@
 </script>
 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <swainButton>你好世界</swainButton>
+  <swainButton type="default" icon="bookmark" @click="handleClick" fill>你好世界</swainButton>
 </template>
+<script>
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  setup() {
+    const handleClick=(e)=>{
+      console.log(e)
+    }
+    return {
+      handleClick
+    }    
+  },
+})
+</script>
 
 <style>
 #app {
